@@ -56,6 +56,9 @@
                                                     </attributedString>
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonOneAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VYb-TJ-bYe"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ny-fm-eHA">
                                                 <rect key="frame" x="0.0" y="68.666666666666686" width="373" height="63.666666666666657"/>
@@ -75,6 +78,9 @@
                                                     </attributedString>
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonTwoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uZJ-nn-s3w"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -114,6 +120,15 @@
                             <constraint firstItem="fdh-z2-rdG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="uZk-8b-Iag"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backGroundImage" destination="fdh-z2-rdG" id="raz-2r-q03"/>
+                        <outlet property="buttonOne" destination="d7K-L9-0uS" id="uxg-76-8Bp"/>
+                        <outlet property="buttonTwo" destination="4ny-fm-eHA" id="SJd-io-VB4"/>
+                        <outlet property="header" destination="3CO-rN-bVw" id="l1f-Uh-LAt"/>
+                        <outlet property="missionLabel" destination="Bl6-fs-lEQ" id="Bo2-Wh-Evi"/>
+                        <outlet property="questionLabel" destination="KB0-Ff-sB4" id="21F-LU-BTD"/>
+                        <outlet property="rewardImage" destination="vEe-nb-qlx" id="ccg-ox-c9n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
