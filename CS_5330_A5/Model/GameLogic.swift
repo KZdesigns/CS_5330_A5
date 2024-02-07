@@ -37,6 +37,8 @@ struct GameLogic {
     var currentStageIndex: Int = 0
     var previousAnswers: [String] = []
     var currentStage: Stage
+    var numberOfRisksTaken: Int = 0
+    var numberOfSafesTaken: Int = 0
 
     // Struct/Game Methods
     mutating func getQuestions() -> [String]{
@@ -48,12 +50,19 @@ struct GameLogic {
     }
     
     mutating func setAnswer(answer: String) {
+        if(answer == "safe") {
+            numberOfSafesTaken += 1
+        } else {
+            numberOfRisksTaken += 1
+        }
         previousAnswers.append(answer)
     }
     
     mutating func reset() {
-        currentStageIndex = 0;
-        previousAnswers = [];
+        currentStageIndex = 0
+        numberOfSafesTaken = 0
+        numberOfRisksTaken = 0
+        previousAnswers = []
     }
     
     func getStage() -> Stage {
@@ -65,10 +74,6 @@ struct GameLogic {
     }
     
     mutating func setStage(stageNumber: Int) {
-        if(currentStageIndex > 3) {
-            reset()
-        }
-        
         let questions = getQuestions()
         let choices = getChoices()
         
@@ -87,6 +92,14 @@ struct GameLogic {
         if(currentStageIndex == 3) {
             currentStage = Stage(question: questions[2], choice1: choices[3][0], choice2: choices[3][1])
         }
+    }
+    
+    func gameOutCome() -> Bool {
+        if(numberOfRisksTaken > numberOfSafesTaken) {
+            return false
+        }
+        
+        return true
     }
     
 }
