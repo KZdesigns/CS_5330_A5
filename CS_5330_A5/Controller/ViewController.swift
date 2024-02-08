@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var rewardImage: UIImageView!
     @IBOutlet weak var missionLabel: UILabel!
     
+    let gameLogic = GameLogic.self
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +24,19 @@ class ViewController: UIViewController {
     }
     
     func setupUI() {
-        // sets up UI
+        // set the background Image
+        backGroundImage.image = UIImage(named: "level-1")
+        // set the header
+        header.text = "Stage 1"
         
+        // set the question
+            // to do this we need a stage
+        // set buttonOne text
+        // set buttonTwo text
+        
+        
+        // set rewardImage
+        // set missionLabel
     }
     
     @IBAction func buttonOneAction(_ sender: Any) {

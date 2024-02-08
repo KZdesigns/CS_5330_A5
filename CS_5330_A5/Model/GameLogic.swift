@@ -73,7 +73,7 @@ struct GameLogic {
         currentStageIndex += 1
     }
     
-    mutating func setStage(stageNumber: Int) {
+    mutating func setStage() {
         let questions = getQuestions()
         let choices = getChoices()
         
