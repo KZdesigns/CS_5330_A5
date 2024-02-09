@@ -21,7 +21,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         setupUI()
     }
     
@@ -83,8 +82,6 @@ class ViewController: UIViewController {
     }
     
     func setReward() {
-        // THINKING: we may want to implement a game status state variable in our game logic this way we can check that if the game is over and return the correct reward
-      
         if(gameLogic.outcome == true) {
             let randomNumber = Int.random(in: 1...8)
             rewardImage.image = UIImage(named: "\(randomNumber)")
@@ -98,7 +95,6 @@ class ViewController: UIViewController {
     }
     
     func setMissionLabel() {
-        // THINKING: we may want to implement a game status state variable in our game logic this way we can check that if the game is over and return the correct missionLabel
         if(gameLogic.currentStageIndex <= 3) {
             missionLabel.text = ""
             return
@@ -120,9 +116,7 @@ class ViewController: UIViewController {
         }
     }
 
-    // TODO: when a button is clicked we need to update the stage and pass whether the option was "safe" or "risky"
     @IBAction func buttonOneAction(_ sender: UIButton) {
-        // example:
         if(gameLogic.currentStageIndex < 3) {
             gameLogic.incrementStageIndex()
             gameLogic.setAnswer(answer: "safe")
