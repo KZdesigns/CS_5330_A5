@@ -111,8 +111,12 @@ class ViewController: UIViewController {
         if(gameLogic.gameOver == true) {
             resetButton.setTitle("Play Again", for: .normal)
             resetButton.isHidden = false
+            buttonOne.isEnabled = false
+            buttonTwo.isEnabled = false
         } else {
             resetButton.isHidden = true
+            buttonOne.isEnabled = true
+            buttonTwo.isEnabled = true
         }
     }
 
@@ -124,6 +128,7 @@ class ViewController: UIViewController {
             setupUI()
         } else {
             gameLogic.incrementStageIndex()
+            gameLogic.setAnswer(answer: "safe")
             gameLogic.gameOutCome()
             setReward()
             setMissionLabel()
@@ -132,7 +137,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonTwoAction(_ sender: UIButton) {
-        // example:
         if(gameLogic.currentStageIndex < 3) {
             gameLogic.incrementStageIndex()
             gameLogic.setAnswer(answer: "risk")
@@ -140,6 +144,7 @@ class ViewController: UIViewController {
             setupUI()
         } else {
             gameLogic.incrementStageIndex()
+            gameLogic.setAnswer(answer: "risk")
             gameLogic.gameOutCome()
             setReward()
             setMissionLabel()

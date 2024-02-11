@@ -65,7 +65,6 @@
 				03ECE05E2B706A790087ECDC /* Model */,
 				03ECE04A2B706A680087ECDC /* AppDelegate.swift */,
 				03ECE04C2B706A680087ECDC /* SceneDelegate.swift */,
-				03ECE0502B706A680087ECDC /* Main.storyboard */,
 				03ECE0532B706A6A0087ECDC /* Assets.xcassets */,
 				03ECE0552B706A6A0087ECDC /* LaunchScreen.storyboard */,
 				03ECE0582B706A6A0087ECDC /* Info.plist */,
@@ -85,6 +84,7 @@
 		03ECE05F2B706A800087ECDC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				03ECE0502B706A680087ECDC /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
